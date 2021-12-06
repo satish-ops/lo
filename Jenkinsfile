@@ -3,13 +3,14 @@ pipeline {
   stages {
     stage('') {
       steps {
-        echo 'hey'
+        sh "print env | sort"
       }
     }
 
     stage('testing') {
       steps {
-        echo 'testing'
+        echo " a = ${BUILD_NUMBER}"
+        sh 'echo build_number =a'
       }
     }
 
