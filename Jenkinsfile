@@ -9,7 +9,7 @@ pipeline {
 
     stage('testing') {
       steps {
-        echo " a = ${BUILD_NUMBER}"
+        echo " a = ${env.BUILD_URL}"
         sh 'echo build_number =a'
       }
     }
